@@ -316,7 +316,7 @@ get.utb <- function(theta, r, h, x, y, zeta, N){
   phi <- diag(theta[c(73:81)])
   delta1 <- diag(theta[c(82:90)])
   delta2 <- diag(theta[c(91:99)])
-  xibar <- theta[c(100:105)]
+  xibar <- theta[c(100:105)]  
   phibar <- diag(theta[c(106:111)])
   
   #help variable
@@ -586,7 +586,7 @@ wrds <- dbConnect(Postgres(),
                   sslmode='require',
                   dbname='wrds',
                   user='mohafner',
-                  password = "jmf.45CT715YXi"
+                  password = "******"
 )
 
 #### get dates ####
@@ -1335,12 +1335,12 @@ legend(x = "topright", legend=c("CCC", "DCC", "MVR", "MVRB"),
              rgb(red = 52/255, green = 56/255, blue = 143/255)), lty=1, cex=0.6)
 
 #graphs comparing models VaR violations
-plot(CCCb.vvar.5, col = rgb(red = 85/255, green = 161/255, blue = 0/255),
-     ylim = c(-0.04,0.2), xlab = 'Time t+k', ylab = 'Indicator function',
-     main = 'Indicator function for VaR 5%')
-points(DCCb.vvar.5, col = rgb(red = 191/255, green = 0/255, blue = 69/255))
-points(MVRNb.vvar.5, col = rgb(red = 254/255, green = 158/255, blue = 0/255))
-points(MVRbb.vvar.5, col = rgb(red = 52/255, green = 56/255, blue = 143/255))
+plot(CCCb.vvar.1, col = rgb(red = 85/255, green = 161/255, blue = 0/255),
+     ylim = c(-0.04,0.16), xlab = 'Time t+k', ylab = 'Indicator function',
+     main = 'Indicator function for VaR 1%')
+points(DCCb.vvar.1, col = rgb(red = 191/255, green = 0/255, blue = 69/255))
+points(MVRNb.vvar.1, col = rgb(red = 254/255, green = 158/255, blue = 0/255))
+points(MVRbb.vvar.1, col = rgb(red = 52/255, green = 56/255, blue = 143/255))
 abline(h=0)
 legend(x = "topright", legend=c("CCC", "DCC", "MVR", "MVRB"),
        col=c(rgb(red = 85/255, green = 161/255, blue = 0/255),
