@@ -1,5 +1,5 @@
 # Master-Thesis
-Forecasts of Risk Measurements using the Multivariate Realized GARCH Model
+Forecasts of Risk Measurements using the Multivariate Realized GARCH Model.
 The highfrequency data was downloaded from the TAQ data base via the Wharton cloud. The code can be found in the file MA.R.
 The original realized correlation and covariance as the intraday price data are in the files: corrmatfin.csv and covmatfin.csv, respectively. 
 The realized correaltion and covariance were log vectorized and subse- quentially saved as: ydf and xdf. These were used in the model estimation.
